@@ -6,13 +6,13 @@
 ## Obtener la imagen desde la red local
 
 ~~~ bash
-docker pull IP:5000/demo1sonar
+docker pull 172.16.7.200:5000/demo1sonar
 ~~~
 
 ## Generar el contenedor
 
 ~~~ bash
-docker run -d --name sonarqube -p 9000:9000 demo1sonar
+docker run -d --name sonarqube -p 9000:9000 172.16.7.200:5000/demo1sonar
 ~~~
 
 ## Consideraciones previas

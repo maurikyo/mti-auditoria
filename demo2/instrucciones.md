@@ -6,13 +6,13 @@
 ## Obtener la imagen desde la red local
 
 ~~~ bash
-docker pull IP:5000/demo2python
+docker pull 172.16.7.200:5000/demo2python
 ~~~
 
 ## Generar el contenedor
 
 ~~~ bash
-docker run --name calidad_datos -p 8888:8888 -v $PWD:/home/jovyan/work demo2python
+docker run --name calidad_datos -p 8888:8888 -v $PWD:/home/jovyan/work 172.16.7.200:5000/demo2python
 ~~~
 
 **Recomendación:** es conveniente ejecutar esta instrucción estando posicionado sobre un directorio desde el que se pueda llegar a la carpeta donde se encuentran estos archivos.

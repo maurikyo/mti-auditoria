@@ -7,13 +7,13 @@
 ## Obtener la imagen desde la red local
 
 ~~~ bash
-docker pull IP:5000/demo3owasp
+docker pull 172.16.7.200:5000/demo3owasp
 ~~~
 
 ## Generar el contenedor
 
 ~~~ bash
-docker run -u zap -p 8080:8080 -p 8090:8090 -i demo3owasp zap-webswing.sh
+docker run -u zap -p 8080:8080 -p 8090:8090 -i 172.16.7.200:5000/demo3owasp zap-webswing.sh
 ~~~
 
 **Recomendación:** no es conveniente ejecutar este tipo de análisis sobre un sitio en producción sin avisar al auditado. Aunque también puede servir para determinar las medidas de seguridad que se hayan tomado para prevenir este tipo de análsis.
