@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+        <title>Seguridad y Auditoría Informática - MTI 2019</title>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+        
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        
+        
+    </head>
+    <body>
+        <h1 id="seguridad-y-auditor%c3%ada-inform%c3%a1tica---mti-2019">Seguridad y Auditoría Informática - MTI 2019</h1>
+<h2 id="introducci%c3%b3n">Introducción</h2>
+<p>Repositorio con el contenido necesario para el desarrollo de las actividades prácticas correspondientes a la temática <strong>CAATs</strong> de la asignatura.</p>
+<h2 id="consideraciones-sobre-el-entorno-de-trabajo">Consideraciones sobre el entorno de trabajo</h2>
+<p>Se va a utilizar docker en la <strong>red local</strong> <a href="https://docs.docker.com/registry/">[REF]</a>, considerando que está instalado en cada equipo se debe copiar el archivo <em>daemon.json</em> de la raíz de este repositorio a la ubicación correspondiente a su sistema operativo. <a href="https://docs.docker.com/registry/insecure/">[REF]</a>.</p>
+<p>Para el caso de windows:</p>
+<ul>
+<li>C:\ProgramData\docker\config\daemon.json</li>
+</ul>
+<p>Para el caso de Linux:</p>
+<ul>
+<li>/etc/docker/daemon.json</li>
+</ul>
+<p>Una vez hecho esto, se debe <strong>reiniciar</strong> el servicio docker en el equipo.</p>
+<h2 id="descarga-de-todas-las-im%c3%a1genes-a-utilizar">Descarga de todas las imágenes a utilizar</h2>
+<pre><code class="language-bash"><div>docker pull 172.16.7.200:5000/demo1sonar &amp;&amp; \
+docker pull 172.16.7.200:5000/demo2python &amp;&amp; \
+docker pull 172.16.7.200:5000/demo3owasp
+</div></code></pre>
+
+    </body>
+    </html>

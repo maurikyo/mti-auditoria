@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+        <title>Demo 1 - Sonarqube</title>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+        
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        
+        
+    </head>
+    <body>
+        <h1 id="demo-1---sonarqube">Demo 1 - Sonarqube</h1>
+<p><a href="https://hub.docker.com/_/sonarqube/">Fuente de la imagen</a><br>
+<a href="https://www.sonarqube.org/">Más información</a></p>
+<h2 id="obtener-la-imagen-desde-la-red-local">Obtener la imagen desde la red local</h2>
+<pre><code class="language-bash"><div>docker pull 172.16.7.200:5000/demo1sonar
+</div></code></pre>
+<h2 id="generar-el-contenedor">Generar el contenedor</h2>
+<pre><code class="language-bash"><div>docker run -d --name sonarqube -p 9000:9000 172.16.7.200:5000/demo1sonar
+</div></code></pre>
+<h2 id="consideraciones-previas">Consideraciones previas</h2>
+<p>Se va a analizar un proyecto de muestra con código Python / PHP. El mismo se encuentra en la carpeta <strong>codigo</strong>.</p>
+<h2 id="pasos-a-seguir">Pasos a seguir</h2>
+<ol>
+<li>Ingresar en el navegador a la <a href="http://localhost:9000/">aplicación</a></li>
+<li>Login con las credenciales por defecto <strong>admin : admin</strong></li>
+<li>Generar un nuevo proyecto:
+<ul>
+<li>Definir un nombre</li>
+<li>Generar un token</li>
+<li>Seleccionar lenguaje y sistema operativo (SO)</li>
+<li>Descomprimir la versión correspondiente a su SO del <strong>sonar-scanner</strong> que se encuentra comprimido en esta misma carpeta</li>
+</ul>
+</li>
+<li>Ejecutar sonar-scanner en la carpeta donde se encuentre el código fuente a analizar</li>
+<li>Una vez que termine la ejecución, volver al navegador y ver los resultados del proyecto</li>
+<li>Generar el reporte del uso de la herramienta para el registro de las evidencias que se encuentren</li>
+</ol>
+<h2 id="origen-del-c%c3%b3digo-a-analizar">Origen del código a analizar</h2>
+<p><a href="https://github.com/genack/gPOS">Repositorio</a></p>
+<h2 id="apagado-del-contenedor">Apagado del contenedor</h2>
+<pre><code class="language-bash"><div>docker stop sonarqube
+</div></code></pre>
+
+    </body>
+    </html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+        <title>Demo 2 - Python + Jupyter + Pandas</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+        <link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        
+        <script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+    </head>
+    <body>
+        <h1 id="demo-2---python--jupyter--pandas">Demo 2 - Python + Jupyter + Pandas</h1>
+<p><a href="https://hub.docker.com/r/jupyter/scipy-notebook/">Fuente de la imagen</a><br>
+<a href="http://jupyter-docker-stacks.readthedocs.io/en/latest/index.html">Documentación</a></p>
+<h2 id="obtener-la-imagen-desde-la-red-local">Obtener la imagen desde la red local</h2>
+<pre><code class="language-bash"><div>docker pull 172.16.7.200:5000/demo2python
+</div></code></pre>
+<h2 id="generar-el-contenedor">Generar el contenedor</h2>
+<pre><code class="language-bash"><div>docker run --name calidad_datos -p 8888:8888 -v <span class="hljs-variable">$PWD</span>:/home/jovyan/work 172.16.7.200:5000/demo2python
+</div></code></pre>
+<p><strong>Recomendación:</strong> es conveniente ejecutar esta instrucción estando posicionado sobre un directorio desde el que se pueda llegar a la carpeta donde se encuentran estos archivos.</p>
+<h2 id="consideraciones-previas">Consideraciones previas</h2>
+<p>Se va a analizar un dataset obtenido a partir de una base de datos a auditar utilizando para ello una serie de evaluaciones implementadas en lenguaje Python dispuestas en una libreta Jupyter. El dataset se encuentra en la carpeta <strong>datasets</strong> y las libretas en la carpeta <strong>libretas</strong>.</p>
+<p>Por otra parte, en la carpeta <strong>docs</strong> se encuentra la documentación de referencia que representa el conocimiento del dominio sobre el cual está basado el dataset. Además, encontrarán un archivo en el que se registrarán los resultados encontrados en el anáisis.</p>
+<h2 id="pasos-a-seguir">Pasos a seguir</h2>
+<ol>
+<li>Cuando inicia el contenedor con Jupyter al final muestra una URL a utilizar, acceder a ella desde el navegador web</li>
+<li>Ingresar a la carpeta <strong>work</strong> en donde va a estar espejada la carpeta actual del demo</li>
+<li>Abrir la libreta <strong><a href="http://localhost:8888/tree/work/libretas/Calidad_de_datos.ipynb">Calidad de datos</a></strong></li>
+<li>Ejecutar las diferentes celdas de la libreta e ir documentando sus resultados</li>
+<li>Generar el reporte del uso de la herramienta para el registro de las evidencias que se encuentren</li>
+</ol>
+<h2 id="apagado-del-contenedor">Apagado del contenedor</h2>
+<pre><code class="language-bash"><div>Ctrl + C
+</div></code></pre>
+
+    </body>
+    </html>
