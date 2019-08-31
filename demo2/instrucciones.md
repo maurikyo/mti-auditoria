@@ -27,10 +27,9 @@ Por otra parte, en la carpeta **docs** se encuentra la documentación de referen
 
 1. Cuando inicia el contenedor con Jupyter al final muestra una URL a utilizar, acceder a ella desde el navegador web
 2. Ingresar a la carpeta **work** en donde va a estar espejada la carpeta actual del demo
-3. Abrir la libreta **[Análisis de datos](http://localhost:8888/tree/work/libretas/Analisis_de_datos_1.ipynb)**
+3. Abrir la libreta **[Calidad de datos](http://localhost:8888/tree/work/libretas/Calidad_de_datos.ipynb)**
 4. Ejecutar las diferentes celdas de la libreta e ir documentando sus resultados
-5. Repetir el proceso del punto 3 con la siguiente libreta **[Libreta 2](http://localhost:8888/tree/work/libretas/Analisis_de_datos_1.ipynb)**
-6. Generar el reporte del uso de la herramienta para el registro de las evidencias que se encuentren
+5. Generar el reporte del uso de la herramienta para el registro de las evidencias que se encuentren
 
 ## Apagado del contenedor
 
