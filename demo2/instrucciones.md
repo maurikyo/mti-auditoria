@@ -6,7 +6,7 @@
 ## Obtener la imagen desde la red local
 
 ~~~ bash
-docker pull 172.16.7.200:5000/demo2python
+docker pull IP:5000/demo2python
 ~~~
 
 ## Generar el contenedor

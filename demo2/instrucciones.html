@@ -1,7 +1,7 @@
 <!DOCTYPE html>
     <html>
     <head>
-        <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+        <meta charset="UTF-8">
         <title>Demo 2 - Python + Jupyter + Pandas</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
@@ -20,12 +20,12 @@
         
         <script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
     </head>
-    <body>
+    <body class="vscode-light">
         <h1 id="demo-2---python--jupyter--pandas">Demo 2 - Python + Jupyter + Pandas</h1>
 <p><a href="https://hub.docker.com/r/jupyter/scipy-notebook/">Fuente de la imagen</a><br>
 <a href="http://jupyter-docker-stacks.readthedocs.io/en/latest/index.html">Documentación</a></p>
 <h2 id="obtener-la-imagen-desde-la-red-local">Obtener la imagen desde la red local</h2>
-<pre><code class="language-bash"><div>docker pull 172.16.7.200:5000/demo2python
+<pre><code class="language-bash"><div>docker pull IP:5000/demo2python
 </div></code></pre>
 <h2 id="generar-el-contenedor">Generar el contenedor</h2>
 <pre><code class="language-bash"><div>docker run --name calidad_datos -p 8888:8888 -v <span class="hljs-variable">$PWD</span>:/home/jovyan/work 172.16.7.200:5000/demo2python

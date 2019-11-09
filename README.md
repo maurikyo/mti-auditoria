@@ -22,9 +22,9 @@ Una vez hecho esto, se debe **reiniciar** el servicio docker en el equipo.
 ## Descarga de todas las imágenes a utilizar
 
 ~~~ bash
-docker pull 172.16.7.200:5000/demo1sonar
-docker pull 172.16.7.200:5000/demo2python
-docker pull 172.16.7.200:5000/demo3owasp
+docker pull IP:5000/demo1sonar
+docker pull IP:5000/demo2python
+docker pull IP:5000/demo3owasp
 ~~~
 
 ## Presentaciones y materiales usados en clase

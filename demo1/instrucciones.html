@@ -1,7 +1,7 @@
 <!DOCTYPE html>
     <html>
     <head>
-        <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+        <meta charset="UTF-8">
         <title>Demo 1 - Sonarqube</title>
         
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
@@ -20,12 +20,12 @@
         
         
     </head>
-    <body>
+    <body class="vscode-light">
         <h1 id="demo-1---sonarqube">Demo 1 - Sonarqube</h1>
 <p><a href="https://hub.docker.com/_/sonarqube/">Fuente de la imagen</a><br>
 <a href="https://www.sonarqube.org/">Más información</a></p>
 <h2 id="obtener-la-imagen-desde-la-red-local">Obtener la imagen desde la red local</h2>
-<pre><code class="language-bash"><div>docker pull 172.16.7.200:5000/demo1sonar
+<pre><code class="language-bash"><div>docker pull IP:5000/demo1sonar
 </div></code></pre>
 <h2 id="generar-el-contenedor">Generar el contenedor</h2>
 <pre><code class="language-bash"><div>docker run -d --name sonarqube -p 9000:9000 172.16.7.200:5000/demo1sonar

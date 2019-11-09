@@ -6,7 +6,7 @@
 ## Obtener la imagen desde la red local
 
 ~~~ bash
-docker pull 172.16.7.200:5000/demo1sonar
+docker pull IP:5000/demo1sonar
 ~~~
 
 ## Generar el contenedor

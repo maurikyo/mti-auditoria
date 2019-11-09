@@ -1,7 +1,7 @@
 <!DOCTYPE html>
     <html>
     <head>
-        <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+        <meta charset="UTF-8">
         <title>Demo 2 - Python + Jupyter + Pandas</title>
         
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
@@ -20,13 +20,13 @@
         
         
     </head>
-    <body>
+    <body class="vscode-light">
         <h1 id="demo-2---python--jupyter--pandas">Demo 2 - Python + Jupyter + Pandas</h1>
 <p><a href="https://hub.docker.com/r/owasp/zap2docker-stable">Fuente de la imagen</a><br>
 <a href="https://github.com/zaproxy/zaproxy/wiki/Docker">Documentación</a><br>
 <a href="https://github.com/zaproxy/zaproxy/wiki/WebSwing">Ejecución en el navegador</a></p>
 <h2 id="obtener-la-imagen-desde-la-red-local">Obtener la imagen desde la red local</h2>
-<pre><code class="language-bash"><div>docker pull 172.16.7.200:5000/demo3owasp
+<pre><code class="language-bash"><div>docker pull IP:5000/demo3owasp
 </div></code></pre>
 <h2 id="generar-el-contenedor">Generar el contenedor</h2>
 <pre><code class="language-bash"><div>docker run -u zap -p 8080:8080 -p 8090:8090 -i 172.16.7.200:5000/demo3owasp zap-webswing.sh
